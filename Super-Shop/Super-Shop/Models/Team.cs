@@ -1,11 +1,15 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Super_Shop.Models
 {
     public class Team
     {
+        [Key]
         public int Id { get; set; }
 
+        [Required]
         public string Name { get; set; }
         public int PowerLevel
         {
@@ -18,6 +22,7 @@ namespace Super_Shop.Models
 
         public string ImageUri { get; set; }
 
+        [NotMapped]
         public int[] MemberIds { get; set; }
 
         public List<Hero> Members { get; set; }

@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Contact
+@{
     ViewData["Title"] = "Contacts";
 }
 <h1>@ViewData["Title"]</h1>
@@ -7,9 +8,9 @@
 
 <address>
     <strong>@ViewBag.Name</strong><br>
-    PLACEHOLDER:ADRESS<br>
-    PLACEHOLDER:POSTAL<br>
-    <abbr title="Phone">P:</abbr>PLACEHOLDER:PHONE
+    @ViewBag.adres<br>
+    @ViewBag.postalcode<br>
+    <abbr title="Phone">P:</abbr>@ViewBag.phonenumber
 </address>
 
 <hr />
@@ -20,21 +21,55 @@
 
     @foreach (var employee in ViewBag.employees)
     {
-    <div class="col-md-4">
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="@Url.Content(employee.ImageUri)" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">@employee.Name</h5>
-                <p class="card-text">@employee.Role</p>
-                <a href="https://www.google.com/search?q=@employee.Name" target="_blank" class="btn btn-primary">Learn more</a>
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="@Url.Content(employee.ImageUri)" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">@employee.Name</h5>
+                    <p class="card-text">@employee.Role</p>
+                    <a href="https://www.google.com/search?q=@employee.Name" target="_blank" class="btn btn-primary">Learn more</a>
+                </div>
             </div>
         </div>
-    </div>
     }
 </div>
 
 <hr />
 
 <h3>The interns</h3>
+<div class="row">
+    @foreach (var intern in ViewBag.interns)
+    {
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">@intern.Name</h5>
+                </div>
+            </div>
+        </div>
+    }
+</div>
 
-<p>PLACEHOLDER:INTERNS</p>
+<h3>Contact us:</h3>
+@using (Html.BeginForm("ContactFormPost", "Home"))
+{
+    <fieldset>
+        <div class="row">
+            @Html.LabelFor(c => c.Title)
+            @Html.EditorFor(c => c.Title)
+        </div>
+        <div class="row">
+            @Html.LabelFor(c => c.Hero)
+            @Html.DropDownListFor(c => c.Hero, new SelectList(@ViewBag.heroes), "Select a Hero")
+        </div>
+        <div class="row">
+            @Html.LabelFor(c => c.Message)
+            @Html.TextAreaFor(c => c.Message)
+        </div>
+        <div class="row">
+            @Html.LabelFor(c => c.Email)
+            @Html.EditorFor(c => c.Email)
+        </div>
+        <input type="submit" value="Send" />
+    </fieldset>
+}

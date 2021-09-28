@@ -1,13 +1,17 @@
-﻿namespace Super_Shop.Models
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+
+namespace Super_Shop.Models
 {
     public class Hero
     {
+        [Key]
         public int Id { get; set; }
-
+        [Required]
         public string Name { get; set; }
+        [Required]
         public int PowerLevel { get; set; }
 
         public string ImageUri { get; set; }
-
     }
 }

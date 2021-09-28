@@ -6,16 +6,23 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Super_Shop.Models;
+using Super_Shop.Repositories;
 
 namespace Super_Shop.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private HeroRepository _heroRepository;
+        private EmployeeRepository _employeeRepository;
+        private Database _database;
 
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+            _database = new Database();
+            _heroRepository = new HeroRepository();
+            _employeeRepository = new EmployeeRepository();
         }
 
         public IActionResult Index()
@@ -27,30 +34,41 @@ namespace Super_Shop.Controllers
         {
             return View();
         }
-
+        
+        [HttpGet]
         public IActionResult Contact()
         {
-            ViewBag.Employees = new List<Employee>()
+            /*ViewBag.Employees = new List<Employee>()
             {
                 new Employee() { Name = "Eric Kuijpers", Role = "CEO", ImageUri = "~/img/employees/eric.jfif" },
                 new Employee() { Name = "Carron Schilders", Role = "CTO", ImageUri = "~/img/employees/carron.jfif"  },
                 new Employee() { Name = "Stijn Smulders", Role = "Service desk", ImageUri = "~/img/employees/stijn.jfif"  },
-            };
-
-
+            };*/
+            ViewBag.Employees = _employeeRepository.FindAll();
             ViewBag.Name = "Super Store inc.";
             ViewBag.Adres = "200 Park Ave";  
             ViewBag.City = "New York";
             ViewBag.Postalcode = "NY 10166";
             ViewBag.Country = "Verenigde Staten";
-            //TODO: Add phone number
-            //TODO: Add email
+            ViewBag.Phonenumber = "0615879703";
+            ViewBag.Email = "info@supershop.net";
+            
+            ViewBag.Interns = new List<Employee>()
+            {
+                new Employee() {Name = "Sven van der Zwet", Role = "Intern"},
+            };
 
-            //TODO: Add 1 intern (Employee, Role = intern)
-
-            return View();
+            ViewBag.Heroes = _heroRepository.FindAll().Select(h => h.Name);
+            
+            return View(new Contact());
         }
 
+        [HttpPost]
+        public IActionResult ContactFormPost(Contact contact)
+        {
+            return View(contact);
+        }
+        
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

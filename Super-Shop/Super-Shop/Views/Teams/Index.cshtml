@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Team>
+
+@{
+    ViewBag.Title = "Teams";
+}
+
+<h2>Teams:</h2>
+<div class="row">
+@foreach (var team in Model)
+ {
+     <div class="col-md p-2">
+             <div class="card" style="width: 18rem;">
+                 <img class="card-img-top" src="@Url.Content(team.ImageUri)" alt="@team.ImageUri">
+                 <div class="card-body">
+                     <h5 class="card-title">@team.Name</h5>
+                     <h6>Members:</h6>
+                     @foreach(var hero in team.Members)
+                         {
+                             <p class="card-text">@hero.Name</p>   
+                         }
+                 </div>
+             </div>
+         </div>
+ }
+</div>

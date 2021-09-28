@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Github\\avans-prg5\\PRG5-Super-Shop\\Super-Shop\\Super-Shop\\Super-Shop.csproj": {}
+    "C:\\git\\PRG5-Super-Shop\\Super-Shop\\Super-Shop\\Super-Shop.csproj": {}
   },
   "projects": {
-    "C:\\Github\\avans-prg5\\PRG5-Super-Shop\\Super-Shop\\Super-Shop\\Super-Shop.csproj": {
+    "C:\\git\\PRG5-Super-Shop\\Super-Shop\\Super-Shop\\Super-Shop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Github\\avans-prg5\\PRG5-Super-Shop\\Super-Shop\\Super-Shop\\Super-Shop.csproj",
+        "projectUniqueName": "C:\\git\\PRG5-Super-Shop\\Super-Shop\\Super-Shop\\Super-Shop.csproj",
         "projectName": "Super-Shop",
-        "projectPath": "C:\\Github\\avans-prg5\\PRG5-Super-Shop\\Super-Shop\\Super-Shop\\Super-Shop.csproj",
-        "packagesPath": "C:\\Users\\links\\.nuget\\packages\\",
-        "outputPath": "C:\\Github\\avans-prg5\\PRG5-Super-Shop\\Super-Shop\\Super-Shop\\obj\\",
+        "projectPath": "C:\\git\\PRG5-Super-Shop\\Super-Shop\\Super-Shop\\Super-Shop.csproj",
+        "packagesPath": "C:\\Users\\SvenD\\.nuget\\packages\\",
+        "outputPath": "C:\\git\\PRG5-Super-Shop\\Super-Shop\\Super-Shop\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\links\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\SvenD\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,10 +38,39 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
               "version": "[3.1.7, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -65,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
