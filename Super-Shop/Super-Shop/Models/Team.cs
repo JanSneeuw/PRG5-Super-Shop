@@ -25,6 +25,6 @@ namespace Super_Shop.Models
         [NotMapped]
         public int[] MemberIds { get; set; }
 
-        public List<Hero> Members { get; set; }
+        public ICollection<Hero> Members { get; } = new List<Hero>();
     }
 }

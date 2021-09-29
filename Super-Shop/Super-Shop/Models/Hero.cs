@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Super_Shop.Models
@@ -13,5 +14,7 @@ namespace Super_Shop.Models
         public int PowerLevel { get; set; }
 
         public string ImageUri { get; set; }
+
+        public ICollection<Team> Teams { get; } = new List<Team>();
     }
 }

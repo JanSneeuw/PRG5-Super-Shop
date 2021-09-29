@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using Super_Shop.Models;
 
 namespace Super_Shop.Repositories
@@ -10,7 +12,8 @@ namespace Super_Shop.Repositories
         {
             using (var context = new ContextFactory().CreateDbContext(null))
             {
-                return context.Teams.ToList();
+                return context.Teams.Include(e => e.Members).ToList();
+                
             }
         }
     }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\git\\PRG5-Super-Shop\\Super-Shop\\Super-Shop\\Super-Shop.csproj": {}
+    "E:\\git\\PRG5-Super-Shop\\Super-Shop\\Super-Shop\\Super-Shop.csproj": {}
   },
   "projects": {
-    "C:\\git\\PRG5-Super-Shop\\Super-Shop\\Super-Shop\\Super-Shop.csproj": {
+    "E:\\git\\PRG5-Super-Shop\\Super-Shop\\Super-Shop\\Super-Shop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\git\\PRG5-Super-Shop\\Super-Shop\\Super-Shop\\Super-Shop.csproj",
+        "projectUniqueName": "E:\\git\\PRG5-Super-Shop\\Super-Shop\\Super-Shop\\Super-Shop.csproj",
         "projectName": "Super-Shop",
-        "projectPath": "C:\\git\\PRG5-Super-Shop\\Super-Shop\\Super-Shop\\Super-Shop.csproj",
+        "projectPath": "E:\\git\\PRG5-Super-Shop\\Super-Shop\\Super-Shop\\Super-Shop.csproj",
         "packagesPath": "C:\\Users\\SvenD\\.nuget\\packages\\",
-        "outputPath": "C:\\git\\PRG5-Super-Shop\\Super-Shop\\Super-Shop\\obj\\",
+        "outputPath": "E:\\git\\PRG5-Super-Shop\\Super-Shop\\Super-Shop\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SvenD\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
               "version": "[3.1.7, )"

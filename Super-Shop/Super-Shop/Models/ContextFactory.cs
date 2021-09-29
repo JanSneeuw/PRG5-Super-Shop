@@ -2,9 +2,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
-using Super_Shop.Models;
 
-namespace Super_Shop.Repositories
+namespace Super_Shop.Models
 {
     public class ContextFactory : IDesignTimeDbContextFactory<ShopDbContext>
     {

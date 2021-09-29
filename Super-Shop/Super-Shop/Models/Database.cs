@@ -50,7 +50,7 @@ namespace Super_Shop.Models
         public Team GetTeamWithMembers(int teamId)
         {
             var team = _teams.First(team => team.Id == teamId);
-            team.Members.AddRange(_heroes.Where(hero => team.MemberIds.Contains(hero.Id)));
+            //team.Members.AddRange(_heroes.Where(hero => team.MemberIds.Contains(hero.Id)));
             return team;
         }
 
