@@ -15,6 +15,7 @@ namespace Super_Shop.Controllers
         private readonly ILogger<HomeController> _logger;
         private HeroRepository _heroRepository;
         private EmployeeRepository _employeeRepository;
+        private ContactRepository _contactRepository;
         private Database _database;
 
         public HomeController(ILogger<HomeController> logger)
@@ -23,6 +24,7 @@ namespace Super_Shop.Controllers
             _database = new Database();
             _heroRepository = new HeroRepository();
             _employeeRepository = new EmployeeRepository();
+            _contactRepository = new ContactRepository();
         }
 
         public IActionResult Index()
@@ -66,7 +68,13 @@ namespace Super_Shop.Controllers
         [HttpPost]
         public IActionResult ContactFormPost(Contact contact)
         {
-            return View(contact);
+            Contact contactDup = new Contact
+            {
+                Title = contact.Title, Email = contact.Email, Message = contact.Message,
+                Hero = _heroRepository.FindByName(contact.HeroName)
+            };
+            
+            return View(_contactRepository.Save(contactDup));
         }
         
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -25,20 +25,4 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Remove="Pages\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Remove="Pages\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="Pages\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Remove="Pages\**" />
-  </ItemGroup>
-
 </Project>

@@ -60,7 +60,7 @@
         </div>
         <div class="row">
             @Html.LabelFor(c => c.Hero)
-            @Html.DropDownListFor(c => c.Hero, new SelectList(@ViewBag.heroes), "Select a Hero")
+            @Html.DropDownListFor(c => c.HeroName, new SelectList(@ViewBag.heroes), "Select a Hero")
         </div>
         <div class="row">
             @Html.LabelFor(c => c.Message)

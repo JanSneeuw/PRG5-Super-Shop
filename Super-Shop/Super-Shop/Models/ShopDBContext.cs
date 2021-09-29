@@ -15,6 +15,7 @@ namespace Super_Shop.Models
         public DbSet<Hero> Heroes { get; set; }
         public DbSet<Team> Teams { get; set; }
 
+        public DbSet<Contact> Contacts { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //Start Employee Seed Data
@@ -55,6 +56,7 @@ namespace Super_Shop.Models
             modelBuilder.Entity<Team>().HasData(team3);
             //Start Team Seed Data
             //End Team Seed Data
+
 
         }
 

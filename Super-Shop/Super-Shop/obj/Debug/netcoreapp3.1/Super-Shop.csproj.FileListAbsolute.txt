@@ -1267,3 +1267,5 @@ E:\git\PRG5-Super-Shop\Super-Shop\Super-Shop\bin\Debug\netcoreapp3.1\runtimes\wi
 E:\git\PRG5-Super-Shop\Super-Shop\Super-Shop\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 E:\git\PRG5-Super-Shop\Super-Shop\Super-Shop\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 E:\git\PRG5-Super-Shop\Super-Shop\Super-Shop\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\git\PRG5-Super-Shop\Super-Shop\Super-Shop\obj\Debug\netcoreapp3.1\Razor\Views\Contact\Index.cshtml.g.cs
+E:\git\PRG5-Super-Shop\Super-Shop\Super-Shop\obj\Debug\netcoreapp3.1\Razor\Views\Contact\Show.cshtml.g.cs
